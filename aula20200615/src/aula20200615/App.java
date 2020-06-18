@@ -4,8 +4,8 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-		Endereco end1Leo =  new Endereco("Avenida taltal",298,"Apto","Zona 5","Maring·","Paran·",true);
-		Endereco end2Leo =  new Endereco("R. Inha˙ma",398,"casa","Zona 3","Maring·","Paran·",false);
+		Endereco end1Leo =  new Endereco("Avenida taltal",298,"Apto","Zona 5","Maring√°","Paran√°",true);
+		Endereco end2Leo =  new Endereco("R. Inha√∫ma",398,"casa","Zona 3","Maring√°","Paran√°",false);
 		Alunos alunoleo = new Alunos(1);
 		alunoleo.setNome("leo");
 		alunoleo.setSobrenome("Nasser");
@@ -13,7 +13,7 @@ public class App {
 		alunoleo.addEndereco(end1Leo);
 		alunoleo.addEndereco(end2Leo);
 		
-		Endereco endJoao = new Endereco("R. Rosana",398,"casa","Sol nascente","Maring·","Paran·",true);
+		Endereco endJoao = new Endereco("R. Rosana",398,"casa","Sol nascente","Maring√°","Paran√°",true);
 		Avalistas avaJoao =  new Avalistas(1);
 		avaJoao.setNome("Joao");
 		avaJoao.setSobrenome("Santos");
@@ -23,11 +23,11 @@ public class App {
 		ContratosEducacionais c1 = new ContratosEducacionais(1,avaJoao,alunoleo);
 		alunoleo.addContrato(c1);
 		
-		//Caso queira ver se est· matriculado ou n„o
+		//Caso queira ver se est√° matriculado ou n√£o
 		System.out.println("Aluno matriculado? "+alunoleo.statusAlunos());
 		
-		Endereco end1Luis =  new Endereco("Av taltal",498,"Casa","Zona 1","Maring·","Paran·",true);
-		Endereco end2Luis =  new Endereco("R. seila",198,"casa","Zona 2","Maring·","Paran·",false);
+		Endereco end1Luis =  new Endereco("Av taltal",498,"Casa","Zona 1","Maring√°","Paran√°",true);
+		Endereco end2Luis =  new Endereco("R. seila",198,"casa","Zona 2","Maring√°","Paran√°",false);
 		Coordenadores coordLuis = new Coordenadores(1);
 		coordLuis.setNome("Luis");
 		coordLuis.setSobrenome("Nascimento");
@@ -35,7 +35,7 @@ public class App {
 		coordLuis.addEndereco(end1Luis);
 		coordLuis.addEndereco(end2Luis);
 		
-		Endereco endLucas =  new Endereco("Av morangueira",321,"apto","Alvorada","Maringpa","Paran·",true);
+		Endereco endLucas =  new Endereco("Av morangueira",321,"apto","Alvorada","Maringpa","Paran√°",true);
 		Professor profLucas = new Professor(1);
 		profLucas.setNome("Lucas");
 		profLucas.setSobrenome("Bores");
@@ -43,9 +43,11 @@ public class App {
 		profLucas.addEndereco(endLucas);
 		
 		
-		Cursos nutricao = new Cursos("NutriÁ„o",1,coordLuis);
-		Turma turmaA = new Turma("Turma A NutriÁ„o",1,nutricao);
+		Cursos nutricao = new Cursos("Nutri√ß√£o",1,coordLuis);
+		Turma turmaA = new Turma("Turma A Nutri√ß√£o",1,nutricao);
 		Disciplina anatomia =  new Disciplina(1,"Anatomia");
+		turmaA.addAlunos(alunoleo);
+		anatomia.addProfessor(profLucas);
 		
 	}
 
